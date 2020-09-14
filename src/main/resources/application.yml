@@ -1,0 +1,5 @@
+mermody:
+  jms:
+    username: Jms Username
+    password: somepasword
+    url: someUrl

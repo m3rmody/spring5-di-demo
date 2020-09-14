@@ -1,0 +1,35 @@
+# this is a comment
+name: Dima
+
+names: #Comment
+  - Dima
+  - Maks
+  - Kola
+  - Vova
+pound_sign: "#"
+
+book:
+  author: Dimas Shevchenko
+  publisher: random house
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no
+
+string_val: "This is it's quote"
+
+colon_string: "my courses: one two three"
+
+include_new_lines:
+  asdf asdf asdf
+  asf asf asf
+  assf assf assf
+
+ignore_new_lines: >
+  this is
+  just one long
+  string
