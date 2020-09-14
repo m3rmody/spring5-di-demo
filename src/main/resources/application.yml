@@ -3,3 +3,11 @@ mermody:
     username: Jms Username
     password: somepasword
     url: someUrl
+
+---
+
+spring:
+  profiles: de
+mermody:
+  jms:
+    username: JMS Username $$$$$$$$ German
