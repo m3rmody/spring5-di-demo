@@ -1,9 +1,8 @@
 package mermody.springframework;
 
-import mermody.springframework.controllers.ConstructorInjectedController;
-import mermody.springframework.controllers.GetterInjectedController;
 import mermody.springframework.controllers.MyController;
-import mermody.springframework.controllers.PropertyInjectedController;
+import mermody.springframework.examplebeans.FakeDataSource;
+import mermody.springframework.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,11 +13,12 @@ public class DiDemoApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 
-		MyController controller = (MyController) ctx.getBean("myController");
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
 
-		System.out.println(controller.hello());
-		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+		System.out.println(fakeDataSource.getUser());
+
+		FakeJmsBroker fakeJmsBroker = ctx.getBean(FakeJmsBroker.class);
+
+		System.out.println(fakeJmsBroker.getUsername());
 	}
 }
